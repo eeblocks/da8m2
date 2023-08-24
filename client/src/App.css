@@ -1,0 +1,213 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* ===================== */
+/* Visits Counter Styles */
+/* ===================== */
+.visits {
+  margin-top: 1%;
+  text-align: center;
+  font-size: 100%;
+}
+
+/* ================ */
+/* Not Found Styles */
+/* ================ */
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Set the width to 50% of the screen */
+  max-width: 90%; /* Add a max-width for larger screens */
+  font-size: 200%;
+  text-align: center;
+  width: 50%; /* Set the width to 50% of the screen */
+  max-width: 90%; /* Add a max-width for larger screens */
+}
+
+/* =========== */
+/* Link Styles */
+/* =========== */
+.link {
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.link:hover {
+  cursor: crosshair;
+}
+
+.link:hover::before {
+  width: 100%; /* Expand white line on hover */
+}
+
+/* ============= */
+/* Navbar Styles */
+/* ============= */
+
+.navbar {
+  text-align: center;
+  align-items: center;
+  padding: 3%;
+}
+
+.navbar-title {
+  font-size: 300%;
+}
+
+button,
+.btn {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+/* ============= */
+/* Card Styles */
+/* ============= */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 50%; /* Adjust the card width as needed */
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px; /* Add negative margin to counter padding */
+}
+
+.form-col {
+  flex: 1;
+  padding: 0 5px; /* Spacing between columns */
+}
+
+.form label {
+  font-weight: bold;
+  font-size: 1.5em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #ffffff;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Include padding and border in width */
+  font-family: "Times New Roman", Times, serif;
+}
+
+.form textarea {
+  height: 20vh;
+}
+
+.form button,
+.btn {
+  background-color: transparent;
+  font-size: 100%;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:disabled,
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn-copy-link {
+  margin-top: 1%;
+}
+
+/* =============== */
+/* Raw Data Styles */
+/* =============== */
+.raw-data {
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 2%;
+}
+
+/* ============= */
+/* Mobile Styles */
+/* ============= */
+@media (max-width: 768px) {
+  .navbar {
+    text-align: center;
+    align-items: center;
+    padding: 9%;
+  }
+
+  .navbar-title {
+    font-size: 250%;
+  }
+
+  .visits {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 100%;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 85%;
+    margin-bottom: 10px;
+  }
+
+  .form textarea {
+    height: 30vh;
+  }
+
+  .raw-data {
+    margin-top: 5%;
+    font-size: 85%;
+  }
+
+  .btn-copy-link {
+    margin-top: 3%;
+  }
+}
